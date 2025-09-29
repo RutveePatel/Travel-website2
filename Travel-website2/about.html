@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JourneyHub • About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F2FAF9;
+      --ink: #0B1F2A;
+      --muted: #5B6B73;
+      --primary: #0EA5A4;
+      --accent: #E9B872;
+      --card: #ffffff;
+      --shadow: 0 8px 26px rgba(0, 0, 0, .08);
+      --radius: 16px;
+    }
+    * {box-sizing: border-box;}
+    html,body {margin: 0; padding: 0;}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    a {text-decoration: none; color: inherit;}
+
+    /* NAVBAR */
+    header {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .brand span { color: var(--accent); }
+    .nav a {
+      margin-left: 20px;
+      font-weight: 600;
+      color: #e5e7eb;
+      padding: .4rem .7rem;
+      border-radius: 6px;
+      transition: .2s;
+    }
+    .nav a.active,
+    .nav a:hover {
+      color: var(--primary);
+      background: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      margin: 22px auto;
+      max-width: 1200px;
+      min-height: 55vh;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.25)),
+        url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop")
+        center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 60px 30px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 12px 0;
+    }
+    .hero p {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      opacity: .95;
+      margin: 0;
+    }
+
+    /* ABOUT CONTENT */
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(3,1fr);
+    }
+    @media(max-width: 900px){.grid{grid-template-columns: repeat(2,1fr)}}
+    @media(max-width: 620px){.grid{grid-template-columns: 1fr}}
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      transition: transform .25s;
+    }
+    .card:hover {transform: translateY(-6px);}
+    .card h3 {
+      margin: 0 0 12px;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+    }
+    .card p {color: var(--muted);}
+
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      margin-top: 30px;
+    }
+    .foot {
+      max-width: 1100px;
+      margin: auto;
+      padding: 42px 20px;
+    }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 22px;
+    }
+    .foot h4 { margin: 0 0 10px; color: var(--accent); }
+    .foot a {
+      display: block;
+      color: #e5e7eb;
+      margin: 6px 0;
+    }
+    .newsletter input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .newsletter button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #0B1F2A;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .copy {
+      border-top: 1px solid rgba(255,255,255,.25);
+      text-align: center;
+      color: #d9f5f3;
+      padding: 14px 0;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="nav">
+      <div class="brand">Journey<span>Hub</span></div>
+      <div>
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>We help you travel smarter, lighter, happier.</h1>
+      <p>Thoughtful guides and honest tips so every journey feels effortless.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="section">
+    <div class="grid">
+      <div class="card">
+        <h3>Mission</h3>
+        <p>Deliver trustworthy, concise travel content that saves time and elevates your experience.</p>
+      </div>
+      <div class="card">
+        <h3>Vision</h3>
+        <p>A world where anyone can explore confidently and sustainably—on any budget.</p>
+      </div>
+      <div class="card">
+        <h3>Why Choose Us</h3>
+        <p>Hand-picked places, practical itineraries, and a clean design focused on what matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot">
+      <div class="foot-grid">
+        <div>
+          <h4>JourneyHub</h4>
+          <p>Creating unforgettable travel experiences since 2010.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Destinations</a>
+        </div>
+        <div>
+          <h4>Popular Destinations</h4>
+          <p>Santorini, Greece</p>
+          <p>Kyoto, Japan</p>
+          <p>Paris, France</p>
+          <p>New York, USA</p>
+        </div>
+        <div class="newsletter">
+          <h4>Newsletter</h4>
+          <input type="email" placeholder="Your email address">
+          <button>Subscribe</button>
+        </div>
+      </div>
+      <div class="copy">© 2025 JourneyHub. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
